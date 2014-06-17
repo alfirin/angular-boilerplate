@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="angularBoilerplate" ng-controller="AppCtrl">
+<head>
+    <title ng-bind="pageTitle"></title>
+    <!-- compiled CSS --><% styles.forEach( function ( file ) { %>
+    <link rel="stylesheet" type="text/css" href="<%= file %>"/>
+    <% }); %>
+</head>
+<body>
+<div class="container">
+    <div class="navbar navbar-default">
+        <div class="navbar-header">
+            <div class="navbar-brand">
+                Angular Boilerplate
+                <small>
+                    v<%= version %>
+                </small>
+            </div>
+        </div>
+        <div class="collapse navbar-collapse" collapse="menuCollapsed">
+            <ul class="nav navbar-nav">
+                <li ui-sref-active="active">
+                    <a href ui-sref="home">
+                        <i class="fa fa-home"></i>
+                        Home
+                    </a>
+                </li>
+                <li ui-sref-active="active">
+                    <a href ui-sref="about">
+                        <i class="fa fa-send"></i>
+                        About
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container" ui-view="main"></div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-inner">
+            <p>
+                (c) 2014.
+            </p>
+        </div>
+    </div>
+</footer>
+<!-- compiled JavaScript --><% scripts.forEach( function ( file ) { %>
+<script type="text/javascript" src="<%= file %>"></script>
+<% }); %>
+</body>
+</html>
