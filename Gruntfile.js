@@ -73,7 +73,7 @@ module.exports = function (grunt) {
                 commitMessage: 'chore(release): v%VERSION%',
                 commitFiles: [
                     "package.json",
-                    "client/bower.json"
+                    "bower.json"
                 ],
                 createTag: false,
                 tagName: 'v%VERSION%',
